@@ -1,0 +1,80 @@
+{
+  "displayName": "Splunk",
+  "name": "splunk-connector-edge",
+  "platform": "edge",
+  "iconPath": "resources/icons/SplunkLogo.svg",
+  "version": "1.0.1",
+  "exchangeUrl": "https://partners.adobe.com/exchangeprogram/experiencecloud/exchange.details.108782.html",
+  "description": "Forward data to Splunk by using the HTTP Event Collector API.",
+  "author": {
+    "name": "Adobe"
+  },
+  "viewBasePath": "dist/",
+  "configuration": {
+    "viewPath": "configuration/configuration.html",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {
+        "token": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["token", "url"],
+      "additionalProperties": false
+    }
+  },
+  "actions": [
+    {
+      "displayName": "Create Event",
+      "name": "create-event",
+      "schema": {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "type": "object",
+        "properties": {
+          "splunkEvent": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "oneOf": [
+                  { "type": "string", "minLength": 1 },
+                  { "type": "object" }
+                ]
+              },
+              "source": {
+                "type": "string"
+              },
+              "sourcetype": {
+                "type": "string"
+              },
+              "time": {
+                "type": "number"
+              },
+              "fields": {
+                "type": "object",
+                "minProperties": 1
+              },
+              "index": {
+                "type": "string"
+              },
+              "host": {
+                "type": "string"
+              }
+            },
+            "required": ["event"],
+            "additionalProperties": false
+          }
+        },
+        "required": ["splunkEvent"],
+        "additionalProperties": false
+      },
+      "libPath": "src/lib/actions/createEvent.js",
+      "viewPath": "actions/createEvent.html"
+    }
+  ]
+}

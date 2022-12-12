@@ -1,0 +1,10 @@
+node_modules
+coverage
+test_results
+dist
+.sandbox
+.entries
+.eslintcache
+.vscode
+package-splunk-connector-edge-*.zip
+splunk-connector-edge-*.tgz
