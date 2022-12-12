@@ -1,4 +1,4 @@
-# Splunk Connector extension for Adobe Experience Platform Event Forwarding
+# Splunk extension for Adobe Experience Platform Event Forwarding
 
 Adobe Experience Platform event forwarding extension that forwards data to Splunk by using the HTTP Event Collector API.
 
