@@ -14,11 +14,6 @@
     "test:watch": "jest --watch",
     "update": "rm -rf node_modules package-lock.json && npm i"
   },
-  "lint-staged": {
-    "*.js": [
-      "eslint --cache --fix"
-    ]
-  },
   "author": "Adobe",
   "license": "Apache 2.0",
   "devDependencies": {
