@@ -1,5 +1,5 @@
 {
-  "name": "splunk-connector-edge",
+  "name": "@adobe/reactor-extension-splunk-edge",
   "version": "1.0.1",
   "description": "Adobe Experience Platform Event Forwarding",
   "scripts": {
