@@ -1,5 +1,8 @@
 # Splunk extension for Adobe Experience Platform Event Forwarding
 
+[![Build Status](https://img.shields.io/github/actions/workflow/status/adobe/reactor-extension-splunk-edge/node.js.yml?style=flat)](https://github.com/adobe/reactor-extension-splunk-edge/actions)
+[![Coverage Status](https://coveralls.io/repos/github/adobe/reactor-extension-splunk-edge/badge.svg?branch=main)](https://coveralls.io/github/adobe/reactor-extension-splunk-edge?branch=main)
+
 Adobe Experience Platform event forwarding extension that forwards data to Splunk by using the HTTP Event Collector API.
 
 ## Get started
